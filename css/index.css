@@ -1,0 +1,150 @@
+  :root {
+    --brand-teal: #46d1c3;
+    --brand-green: #40bf57;
+    --dark: #1a1a1a;
+    --light-bg: #f4f4f4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Arial, sans-serif;
+    background: var(--light-bg);
+    line-height: 1.6;
+  }
+  nav {
+    margin-top: 0px;
+    background: var(--dark);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+  }
+  nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+  }
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem 1rem;
+  }
+  /* ================ HERO (intro) ================ */
+  .intro {
+    text-align: center;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .intro .hero-bar {
+    width: 100%;
+    height: 60px;
+    background: var(--brand-teal);
+  }
+  .intro h1 {
+    font-size: 3rem;
+    margin: 2rem 0 0.5rem;
+  }
+  .intro h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+  .cta-btn {
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
+    border: 3px solid var(--brand-green);
+    background: var(--brand-green);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.25s;
+  }
+  .cta-btn:hover { opacity: 0.85; }
+
+  /* =========== FEATURE CARD (new section) =========== */
+  .feature-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    margin: 4rem 0;
+    display: flex;
+    overflow: hidden;
+  }
+  .feature-left, .feature-right { flex: 1; }
+  .feature-left { padding: 2rem 2.5rem; }
+  .feature-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .feature-left h3 { font-size: 2rem; margin-bottom: 1rem; }
+  .tab-nav {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  .tab-p{
+    margin: 1rem 0 2rem;
+  }
+  .tab-nav span {
+    padding: 0.25rem 0.75rem;
+    border-radius: 14px;
+    background: #eee;
+    cursor: pointer;
+  }
+  .tab-nav .active { background: var(--brand-teal); color: #fff; }
+  .learn-more {
+    padding: 0.6rem 1.6rem;
+    background: #fff;
+    border: 2px solid var(--brand-green);
+    color: var(--brand-green);
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s, color 0.25s;
+  }
+  .learn-more:hover {
+    background: var(--brand-green);
+    color: #fff;
+  }
+
+  /* ================ PROJECTS & OTHERS ================ */
+  .projects { margin-bottom: 3rem; }
+  .project {
+    background: #fff;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+  }
+  .project img { width: 100%; border-radius: 5px; }
+  .linkedin-section { display: flex; gap: 2rem; }
+  .posts, .sidebar {
+    border-radius: 8px;
+    background: #fff;
+    padding: 1rem;
+  }
+  .posts { flex: 3; }
+  .sidebar {
+    flex: 1;
+    background: #e0e0e0;
+    height: 400px;
+    overflow-y: auto;
+  }
+  footer {
+    background: var(--dark);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+  }
