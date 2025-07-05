@@ -303,3 +303,22 @@
     border-radius: 4px;
     margin-right: 0.75rem;
   }
+
+  .categoryItems {
+    display: none;
+    flex-direction: column;
+  }
+  .category.open .categoryItems {
+    display: flex;
+  }
+  .categoryTitle {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .toggle-icon {
+    font-weight: bold;
+    margin-left: 0.5rem;
+  }

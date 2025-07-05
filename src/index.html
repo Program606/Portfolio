@@ -71,9 +71,18 @@
       <div id="midBoxL">
         <div id="ovMenu" class="ovItem">
           <div class="category">
-            <div class="categoryTitle"> Player Icons</div>
-            <div class="categoryItem">Minotaur</div>
-            <div class="categoryItem">Royal Captain</div>
+            <div class="categoryTitle">Player Icons <span class="toggle-icon">+</span></div>
+            <div class="categoryItems">
+              <div class="categoryItem selected">Minotaur</div>
+              <div class="categoryItem">Royal Captain</div>
+            </div>
+          </div>
+          <div class="category">
+            <div class="categoryTitle">Sprays <span class="toggle-icon">+</span></div>
+            <div class="categoryItems">
+              <div class="categoryItem">Dragon Dance</div>
+              <div class="categoryItem">Retro Cowboy</div>
+            </div>
           </div>
         </div>
       </div>
@@ -111,5 +120,24 @@
   <footer id="contact">
     <p>Contact me at: prince@example.com</p>
   </footer>
+
+  <script>
+  document.querySelectorAll('.categoryTitle').forEach(title => {
+    title.addEventListener('click', function() {
+      const category = this.parentElement;
+      const isOpen = category.classList.toggle('open');
+      // Toggle icon
+      const icon = this.querySelector('.toggle-icon');
+      icon.textContent = isOpen ? '−' : '+';
+    });
+  });
+  // Open the first category by default
+  const firstCategory = document.querySelectorAll('.category')[0];
+  if (firstCategory) {
+    firstCategory.classList.add('open');
+    const icon = firstCategory.querySelector('.toggle-icon');
+    if (icon) icon.textContent = '−';
+  }
+  </script>
 </body>
 </html>
