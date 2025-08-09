@@ -5,16 +5,22 @@
     --light-bg: #f4f4f4;
     --beigeM: #EAECC6;
     --skyBlueM: #2BC0E4;
+    /* CSS HEX */
+    --oxford-blue: #001b2eff;
+    --charcoal: #294c60ff;
+    --french-gray: #adb6c4ff;
+    --papaya-whip: #ffefd3ff;
+    --peach: #ffc49bff;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: Arial, sans-serif;
-    background: var(--light-bg);
+    background: var(--oxford-blue);
     line-height: 1.6;
   }
   nav {
     margin-top: 0px;
-    background: var(--dark);
+    background: var(--oxford-blue);
     color: #fff;
     text-align: center;
     padding: 1rem;
@@ -48,45 +54,82 @@
     padding: 0rem 0rem 0.5rem 0rem;
     display: flex;
     flex-direction: column;
-    background-color: #40bf57;
-    border-radius: 7%;
+    background-color: var(--oxford-blue);
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.10), 0 1.5px 4px rgba(44, 62, 80, 0.08);
+    border: 2px solid transparent;
+    transition: transform 0.15s, box-shadow 0.15s, border 0.15s;
+  }
+
+  .featuredProjectItems:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18), 0 2px 8px rgba(44, 62, 80, 0.12);
+    border: 2px solid var(--brand-teal);
   }
 
   .featuredProjectItems img {
-    width: 100%;
-    height: 20%;
+    align-self: center;
+    margin-top: 1rem;
+    width: 90%;
+    height: 30%;
     object-fit: cover;
-    border-top-left-radius: 7%;
-    border-top-right-radius: 7%;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    background: var(--light-bg);
   }
   .featuredProjectItems h2 {
-    font-size: 2.5rem;
-    font-weight: 400;
+    font-size: 2.2rem;
+    font-weight: 900;
+    border-radius: 8px;
+    padding: 0.2em 0.7em;
     margin-top: 1rem;
-    background-color: var(--beigeM);
-    text-align: center;
-    text-wrap: wrap;
+    text-align: left;
+    letter-spacing: 0.01em;
+    font-family: 'Arial Black', Arial, sans-serif;
+    color: var(--dark);
+    background: transparent;
   }
   .featuredProjectItems p {
-    font-size: large;
-    font-weight: 400;
-    margin-top: 1rem;
-    background-color: var(--beigeM);
-    text-align: center;
+    font-size: medium;
+    font-weight: 800;
+    margin: 1rem 2rem 0rem 3rem;
+    text-align: left;
+    color: var(--brand-green);
   }
   .featuredProjectItems ul{
     
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content:flex-start;
     margin-top: 0.5rem;
     flex-wrap: wrap;
   }
   .featuredProjectItems li{
-    background-color: white;
+    background-color: var(--light-bg);
     border-radius: 25%;
     padding: 0.5rem;
     margin: 0.5rem 0.5rem 0rem 0.5rem;
+    color: var(--dark);
+    font-weight: 600;
+  }
+  .featuredProjectItems button{
+    padding: 0.5rem;
+    margin: 1rem 1rem 1rem 1rem;
+    width: 9rem;
+    height: 3rem;
+    background: var(--brand-teal);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px 10px 0 10px;
+    border: 2px solid var(--brand-green);
+    font-size: 1.2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    display: inline-block;
+    transition: background 0.2s, color 0.2s;
+  }
+  .featuredProjectItems button:hover {
+    background: var(--brand-green);
+    color: #fff;
   }
   #featuredSkills {
     background-color: #165f75;
@@ -150,11 +193,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--papaya-whip);
   }
   .intro .hero-bar {
     width: 100%;
     height: 60px;
-    background: var(--brand-teal);
+    /* background: var(--brand-teal); */
   }
   .intro h1 {
     font-size: 3rem;
@@ -322,3 +366,104 @@
     font-weight: bold;
     margin-left: 0.5rem;
   }
+
+  .live-project-btn {
+    background: #181c23;         
+    color: #fff;             
+    font-weight: bold;           
+    border-radius: 10px 10px 0 10px;
+    padding: 0.4rem 1.2rem;     
+    border: 2px solid #3b2250;  
+    font-size: 1.2rem;           
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12); 
+    display: inline-block;
+    transition: background 0.2s, color 0.2s;
+  }
+  .live-project-btn:hover {
+    background: #23263a;         /* slightly lighter on hover */
+    color: #fff;
+  }
+  .featuredSkills {
+    background-color: #2BC0E4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .skillSection{
+    background-color: rebeccapurple;
+  }
+  .skillPart{
+    background-color: #232f41;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  .skillContainer{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    background-color: peachpuff;
+  }
+  .skillItem{
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+    justify-content: space-evenly;
+    border-radius: 25px;
+  }
+  .testImage{
+    background-color: #3b2250;
+    width: 20rem;
+    height: 10rem;
+  }
+
+.skillItem {
+  background: var(--beigeM);
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.10), 0 1.5px 4px rgba(44, 62, 80, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  margin: 1.5rem 1rem;
+  min-width: 220px;
+  min-height: 220px;
+  transition: transform 0.15s, box-shadow 0.15s, border 0.15s;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.skillItem:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18), 0 2px 8px rgba(44, 62, 80, 0.12);
+  border: 2px solid var(--brand-teal);
+}
+
+.skillItem img,
+.skillItem .testImage {
+  width: 100%;
+  max-width: 260px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+  background: var(--light-bg);
+}
+
+.skillItem h2 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+.skillItem p {
+  font-size: 1rem;
+  color: var(--dark);
+  opacity: 0.8;
+  font-weight: 500;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
